@@ -6,18 +6,18 @@ use Carp;
 use Config::Scoped;
 
 =head1 NAME
-BBConfig::DiskSets - Access to Box Backup diskset config files
+BoxBackup::Config::DiskSets - Access to Box Backup diskset config files
 
 =head1 SYNOPSIS
 
-  use BBConfig::DiskSets;
-  $diskSets = BBConfig::DiskSets->new();
+  use BoxBackup::Config::DiskSets;
+  $diskSets = BoxBackup::Config::DiskSets->new();
 
 or
 
-  use BBConfig::DiskSets;
+  use BoxBackup::Config::DiskSets;
   $file = "/etc/bbox/raidfile.conf";
-  $diskSets = BBConfig::DiskSets->new($file);
+  $diskSets = BoxBackup::Config::DiskSets->new($file);
 
   @diskNames = $diskSets->getListofDisks();
   foreach $i (@diskNames)
@@ -26,7 +26,7 @@ or
   }
   
 =head1 ABSTRACT
-BBConfig::DiskSets is a rather simple package that lets the user
+BoxBackup::Config::DiskSets is a rather simple package that lets the user
 have access to the data from the disk set configuration file for
 Box Backup. It provides methods to retrieve the data only. No creation
 or editing is supported.

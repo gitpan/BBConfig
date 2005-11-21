@@ -9,14 +9,14 @@ BBConfig::Accounts - Access to Box Backup account config files
 
 =head1 SYNOPSIS
 
-  use BBConfig::Accounts;
-  $bbconfig = BBConfig::Accounts->new();
+  use BoxBackup::Config::Accounts;
+  $bbconfig = BoxBackup::Config::Accounts->new();
 
 or
 
-  use BBConfig::Accounts;
+  use BoxBackup::Config::Accounts;
   $file = "/etc/bbox/accounts.txt";
-  $bbconfig = BBConfig::Accounts->new($file);
+  $bbconfig = BoxBackup::Config::Accounts->new($file);
 
   @accounts = $bbconfig->getAccountIDs();
   foreach $i (@accounts)
@@ -27,7 +27,7 @@ or
   
 =head1 ABSTRACT
 
-BBConfig::Accounts is a rather simple package that lets the user
+BoxBackup::Config::Accounts is a rather simple package that lets the user
 have access to the data from the accounts configuration file for
 Box Backup. It provides methods to retrieve the data only. No creation
 or editing is supported.
@@ -62,7 +62,7 @@ Per Reedtz Thomsen (L<mailto:pthomsen@reedtz.com>)
  
 =cut
   
-our $VERSION = v0.01;
+our $VERSION = v0.02;
 
 sub new
 {
