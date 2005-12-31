@@ -6,6 +6,7 @@ use Carp;
 use Config::Scoped;
 
 =head1 NAME
+
 BoxBackup::Config::DiskSets - Access to Box Backup diskset config files
 
 =head1 SYNOPSIS
@@ -26,15 +27,18 @@ or
   }
   
 =head1 ABSTRACT
+
 BoxBackup::Config::DiskSets is a rather simple package that lets the user
 have access to the data from the disk set configuration file for
 Box Backup. It provides methods to retrieve the data only. No creation
 or editing is supported.
 
 =head1 REQUIRES
+
 L<Config::Scoped>.
 
 =head1 DESCRIPTION
+
 Allows for programmatic access to the information stored in the Box
 Backup 'disk set' config file, which holds the information related to
 each disk set in the Box Backup installation.
@@ -92,9 +96,12 @@ Dir2. The third RAID drive.
 =back
 
 =head1 AUTHOR
+
 Per Reedtz Thomsen (L<mailto:pthomsen@reedtz.com>)
  
 =cut
+
+our $VERSION = v0.03;
 
 sub new
 {

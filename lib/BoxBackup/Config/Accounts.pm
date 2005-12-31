@@ -5,6 +5,7 @@ use strict;
 use Carp;
 
 =head1 NAME
+
 BBConfig::Accounts - Access to Box Backup account config files
 
 =head1 SYNOPSIS
@@ -62,7 +63,7 @@ Per Reedtz Thomsen (L<mailto:pthomsen@reedtz.com>)
  
 =cut
   
-our $VERSION = v0.02;
+our $VERSION = v0.03;
 
 sub new
 {
@@ -104,6 +105,16 @@ sub getDisk
     return -1;
 }
 
+sub setDisk
+{
+    my ($self, $accountID, $diskSet) = @_;
+    my $accountIDF = sprintf("%lx", hex($accountID));
+    
+    $self->{$accountIDF} = $diskSet;
+    
+}
+
+
 sub getAccountIDs
 {
     my ($self) = @_;
@@ -111,6 +122,7 @@ sub getAccountIDs
     return sort numerically (keys %$self);
 
 }
+
 
 
 1;

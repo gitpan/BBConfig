@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'BBConfig',
     VERSION_FROM      => 'lib/BoxBackup/Config/Accounts.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {'Config::Scoped' => '0.11'}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT       => 'lib/BoxBackup/Config/Accounts.pm', # retrieve abstract from module
        AUTHOR         => 'Per Reedtz Thomsen <pthomsen@reedtz.com>') : ()),

@@ -8,3 +8,5 @@ t/DiskSet.t
 t/raidfile.conf
 lib/BoxBackup/Config/Accounts.pm
 lib/BoxBackup/Config/DiskSets.pm
+lib/BoxBackup/Config/BBackupd.pm
+lib/BoxBackup/Config/BBstored.pm
